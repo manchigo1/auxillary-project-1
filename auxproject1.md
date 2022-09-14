@@ -13,7 +13,7 @@ Create a shell script named onboarding-users.sh and have it do the following:
 ----------------------------------------------------
 ## Create ec2 instance ## 
 Copy onboarding-users.sh and names.csv to server
-`scp -i private_key.pem onboarding-users.sh user@ip-address:~/;`
+`scp -i private_key.pem onboarding.sh user@ip-address:~/;`
 `scp -i private_key.pem names.csv user@ip-address:~/;`
 ![adding onnboard](./images/adding%20onboard.png)
 
@@ -22,44 +22,49 @@ Copy onboarding-users.sh and names.csv to server
 `mkdir Shell`
 ```
 
-## Move onboarding-users.sh and names.csv into Shell directory
+## Move onboard.sh and names.csv into Shell directory
 ```
-`mv onboarding-users.sh Shell`
+`mv onboard.sh Shell`
 `mv names.csv Shell`
 ```
 
 ## Navigate into Shell directory
+
 ```
 `cd Shell`
 ```
 ![shell](./images/shell%20.png)
 
 ## Create and edit file for public key to be used by new users:
+
 ```
 `vi id_rsa.pub`
 ```
 
-## Insert the public key provided for project.
+## Insert the public key provided from documentation.
 Create and edit file for private key to be used by new users:
 ```
 vi id_rsa
 ```
 
-## Insert the private key provided for project.
+## Insert the private key provided from documentation.
 Create user group in which new users are to be added:
 ```
 `sudo groupadd developers`
 ```
-## Add an executable permission to the onboarding-users.sh file:
+## Add an executable permission to the onboard.sh file:
 ```
-`sudo chmod +x onboarding.sh`
+`sudo chmod +x onboard.sh`
 ```
+
 Switch current user to root;
+
 ```
 `sudo su`
 ```
 
-## Execute onboarding-users.sh
+## Execute onboard.sh
+
 ```
 `./onboard.sh`
 ```
